@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Home</title>
+<title>Springs Park home page</title>
 <style type="text/css">
 <!--
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background-color: #000000;
+	background-color: #42413C;
 	margin: 0;
 	padding: 0;
-	color: #8A2BE2;
+	color: #000;
 }
 
 /* ~~ Element/tag selectors ~~ */
@@ -29,7 +29,7 @@ a img { /* this selector removes the default blue border displayed in some brows
 
 /* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
 a:link {
-	color: #FF00FF;
+	color: #42413C;
 	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
 }
 a:visited {
@@ -40,22 +40,21 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	text-decoration: none;
 }
 
-/* ~~ This fixed width container surrounds all other divs ~~ */
+/* ~~this fixed width container surrounds the other divs~~ */
 .container {
 	width: 960px;
-	background-color: #000000;
+	background-color: #FFF;
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
 }
 
-/* ~~ The header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo. ~~ */
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
 .header {
-	background-color: #000000;
-	height: 120px;
+	background-color: #ADB96E;
 }
 
 /* ~~ These are the columns for the layout. ~~ 
 
-1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
 
 2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
 
@@ -67,20 +66,14 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 .sidebar1 {
 	float: left;
 	width: 180px;
-	background-color: #000000;
+	background-color: #EADCAE;
 	padding-bottom: 10px;
 }
 .content {
 
 	padding: 10px 0;
-	width: 600px;
+	width: 780px;
 	float: left;
-}
-.sidebar2 {
-	float: left;
-	width: 180px;
-	background-color: #000000;
-	padding: 10px 0;
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -99,25 +92,25 @@ ul.nav li {
 }
 ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
 	padding: 5px 5px 5px 15px;
-	display: block; /* this gives the anchor block properties so it fills out the whole LI that contains it so that the entire area reacts to a mouse click. */
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
 	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
 	text-decoration: none;
 	background-color: #C6D580;
 }
 ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
-	background-color: #FFFFFF;
-	color: #FFFFFF;
+	background-color: #ADB96E;
+	color: #FFF;
 }
 
-/* ~~ The footer styles ~~ */
+/* ~~ The footer ~~ */
 .footer {
 	padding: 10px 0;
-	background-color: #000000;
+	background-color: #CCC49F;
 	position: relative;/* this gives IE6 hasLayout to properly clear */
 	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
 }
 
-/* ~~ Miscellaneous float/clear classes ~~ */
+/* ~~ miscellaneous float/clear classes ~~ */
 .fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
 	float: right;
 	margin-left: 8px;
@@ -126,7 +119,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 	float: left;
 	margin-right: 8px;
 }
-.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the .container) if the .footer is removed or taken out of the .container */
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
 	clear:both;
 	height:0;
 	font-size: 1px;
@@ -139,34 +132,35 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 
 <div class="container">
   <div class="header">
-  <p> Cool banner here </p>
-  </div>
+  <div align="left"><a href="#"><img src="" alt="Insert Logo Here" name="Insert_logo" width="180" height="90" id="Insert_logo" style="background-color: #C6D580; display:block;" /></a></div> 
+  <!-- end .header --></div>
   <div class="sidebar1">
-  <img src="dna2.jpg" width="184" height="315" alt="" />
-<img src="dna2.jpg" width="183" height="419" alt="" />
-  
-  <!-- end .sidebar1 --></div>
+    <ul class="nav">
+      <li><a href="index.html" target="_self">Home</a></a><a href="#"></a></li>
+      <li><a href="new_arrivals.html" target="_self">New Arrivals</a><a href="#"></a></li>
+      <li><a href="opening_times.html" target="_self">Opening Times</a><a href="#"></a></li>
+      <li><a href="home.html" target="_self">Sams</a><a href="#"></a></li>
+    </ul>
+
+    <!-- end .sidebar1 --></div>
   <div class="content">
-    
-    <div align="center">
-      
-      <!-- end .content --><span class="header"><a href="home.html" target="_self">Home</a>    Biography(Link to bio) Music(Link to music Page)</span></div>
-      <!-- add here to put shit in the main page of the site -->
     <hr width="50%" size="10" noshade="noshade" />
-    <h1 align="center">Up Coming Events</h1>
-    <p>Bla Bla Bla Content here </p>
-    <h1 align="center">News</h1>
-    <p>Bla Bla Bla Content here </p>
-  <img src="Violinpool.jpg" width="583" height="396" alt="" /> </div>
-  <div class="sidebar2">
-    <img src="dna2.jpg" width="181" height="242" alt="" />
-    <img src="dna2.jpg" width="179" height="333" alt="" />
-<!-- end .sidebar2 --></div>
+    <h1 align="center">Welcome to Spring Park</h1>
+    <p>Our park is a great location for a family day out- </p>
+    <h2 align="center">Attractions</h2>
+    <p>We have many great attractions, including stunning scenery and spectacular </p>
+    <h3 align="center">New arrivals    </h3>
+    <p>Our marine exhibits include new penguins from South America.</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4>&nbsp;</h4>
+    <p>&nbsp;</p>
+    <!-- end .content --></div>
   <div class="footer">
-    <p align="center">&copy;Beautiful Generation Music.  Page last updated 
+    <p align="center">&copy;Springs Park Inc.  Page last updated 
       <!-- #BeginDate format:fcAm1 -->Tuesday, October 28, 2014<!-- #EndDate -->
     </p>
     <!-- end .footer --></div>
-  <!-- end .container --></div>
+<!-- end .container --></div>
 </body>
 </html>
